@@ -1,0 +1,12 @@
+source ft_transcendence_env/bin/activate
+deactivate
+
+python manage.py runserver
+
+psql -U ft_user -d ft_transcendence_db
+
+docker-compose logs nginx
+docker-compose logs back
+docker-compose logs db
+
+docker exec -it ft_transcendence-back-1 python manage.py createsuperuser

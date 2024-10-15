@@ -1,0 +1,201 @@
+/* Main body styling with a new gradient background */
+body {
+  background: linear-gradient(180deg, #6a1b9a, #42a5f5); /* Purple to blue gradient */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Style modifications for the ball object */
+#ball {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(238, 229, 229);
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Enhancements for dropdown menu readability and interaction */
+.dropdown-menu .dropdown-item:hover {
+  color: #000 !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Button size customization for friend requests */
+.buttonfriends {
+  height: 30px;
+  width: 85px;
+}
+
+.buttonvalid {
+  height: 30px;
+  width: 40px;
+}
+
+/* Block sizing for game and friends sections */
+.colSize {
+  height: 480px;
+  min-width: 300px;
+}
+
+/* Fading dot animations with adjusted timing and color */
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #42a5f5; /* Changed to blue */
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: fade 1.5s infinite;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fade {
+  33% {
+      opacity: 1;
+  }
+  0%, 100% {
+      opacity: 0.2;
+  }
+  66% {
+      opacity: 0.2;
+  }
+}
+
+/* Customizing popover appearance to match the new theme */
+.popover {
+  max-width: 300px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.popover .popover-body {
+  border-color: #212529;
+  background-color: #212529; /* Dark background */
+  border-radius: 0px 0px 5px 5px; 
+  color: white;
+}
+
+.popover .arrow::before {
+  background-color: #212529;
+  border-bottom-color: rgb(219, 213, 213);
+}
+
+.popover .popover-header {
+  background: #6a1b9a; /* Purple background */
+  border-radius: 5px 5px 0px 0px;
+  border-color: rgb(0, 0, 0);
+  color: white;
+}
+
+/* Animation styles for sliding messages */
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+}
+
+/* Style modifications for input elements to reflect new color theme */
+input[type="text"], input[type="password"], .form-control {
+  background-color: #fff;
+  border: 2px solid #6a1b9a; /* Purple border */
+}
+
+/* Enhanced button styles with new colors for interaction */
+.btn {
+  background-color: #6a1b9a; /* Purple background */
+  color: white;
+}
+
+.btn:hover {
+  background-color: #42a5f5; /* Blue background on hover */
+  color: #fff;
+}
+
+.link-underline-light {
+  color: #42a5f5; /* Light blue links */
+}
+
+/* Horizontal rules styled to match new color theme */
+hr {
+  border-color: #6a1b9a; /* Purple horizontal rules */
+}
+
+/* RTL (Right-to-Left) support for Arabic */
+body[style*="direction: rtl"] {
+  text-align: right;
+}
+
+/* Adjust text alignment and padding for RTL */
+body[style*="direction: rtl"] .navbar, 
+body[style*="direction: rtl"] .dropdown-menu, 
+body[style*="direction: rtl"] .popover,
+body[style*="direction: rtl"] .modal-content {
+  text-align: right;
+}
+
+/* Adjust the dropdown menus for RTL */
+body[style*="direction: rtl"] .dropdown-menu {
+  text-align: right;
+}
+
+/* Flip the direction of arrows or icons that are direction-sensitive */
+body[style*="direction: rtl"] .bi-caret-right-fill {
+  transform: scaleX(-1);
+}
+
+/* Invert the layout of form elements and buttons */
+body[style*="direction: rtl"] .form-control, 
+body[style*="direction: rtl"] .btn, 
+body[style*="direction: rtl"] .input-group {
+  direction: rtl;
+}
+
+/* Adjust the horizontal rule for RTL */
+body[style*="direction: rtl"] hr {
+  text-align: right;
+}
+
+/* Ensure popovers are aligned correctly in RTL */
+body[style*="direction: rtl"] .popover {
+  text-align: right;
+}
+
+body[style*="direction: rtl"] .popover .popover-body {
+  text-align: right;
+}
+
+/* Ensure proper handling of margins and paddings */
+body[style*="direction: rtl"] .navbar-nav {
+  margin-right: auto;
+}
+
+/* Custom adjustments for specific components if needed */
+body[style*="direction: rtl"] .custom-component {
+  /* Example: flipping margins or paddings */
+  padding-right: 15px; /* Assuming LTR has padding-left: 15px */
+  padding-left: 0;
+}
